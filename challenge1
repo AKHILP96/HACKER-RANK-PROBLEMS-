@@ -1,0 +1,39 @@
+package ctci;
+
+import java.util.Scanner;
+
+public class uniquechar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str;
+		boolean flag=false;
+		System.out.println("Enter a string:");
+		Scanner in = new Scanner(System.in);
+		str = in.nextLine();
+	//	System.out.println(str);
+		flag = isunique(str);
+		System.out.println(flag);
+	}
+
+	private static boolean isunique(String str) {
+		// TODO Auto-generated method stub
+		//System.out.println(str);
+		if(str.length()>128){
+			return false;
+		}
+		boolean[] chars = new boolean[128];
+		for( int i=0;i<str.length();i++){
+			int temp = str.charAt(i);
+			if(chars[temp]){
+				System.out.println(temp);
+				return false;
+			}
+			else 
+				chars[temp] = true;
+		}
+		
+		return true;
+	}
+
+}
