@@ -1,0 +1,29 @@
+package ctci;
+
+import java.util.Scanner;
+
+public class zeromatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i,j;
+		System.out.println("Enter the size of array " );
+		Scanner input = new Scanner(System.in);
+		int m = input.nextInt();
+		int arr[][] = new int[m][m]; 
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<m;j++){
+				arr[i][j] = input.nextInt();
+			}
+		}
+		for(i=0;i<m;i++){
+			for(j=0;j<m;j++){
+				if(arr[i][j]==0){	
+					
+					}
+				}
+		}
+	}
+
+}
