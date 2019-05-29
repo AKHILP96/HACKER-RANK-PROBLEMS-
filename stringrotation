@@ -1,0 +1,19 @@
+package ctci;
+
+import java.util.Scanner;
+
+public class stringrotation {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a string");
+		String s1 = input.nextLine();
+		System.out.println("Enter rotated string");
+		String s2 = input.nextLine();
+		String s3 = s1+s1;
+		if(s3.contains(s2)){
+			System.out.println("True");
+		}else{
+			System.out.println("False");
+		}
+	}
+}
