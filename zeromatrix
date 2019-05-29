@@ -17,13 +17,35 @@ public class zeromatrix {
 				arr[i][j] = input.nextInt();
 			}
 		}
+		boolean rows[] = new boolean[m];
+		boolean cols[] = new boolean[m];
 		for(i=0;i<m;i++){
 			for(j=0;j<m;j++){
 				if(arr[i][j]==0){	
-					
+					rows[i] = true;
+					cols[j] = true;
 					}
 				}
 		}
+		for(i=0;i<m;i++){
+			if(rows[i]){
+				for(j=0;j<m;j++){
+					arr[i][j]=0;
+				}
+			}
+			if(cols[i]){
+				for(j=0;j<m;j++){
+					arr[j][i]=0;
+				}
+			}
+		}
+		System.out.println("array");
+		for(i=0;i<m;i++){
+			for(j=0;j<m;j++){
+					System.out.print(arr[i][j]);
+		}
+			System.out.println();
 	}
 
+}
 }
