@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        scores = (((scores[0]+scores[1]+scores[2])/3.00)*100)/100
+        student_marks[name] = scores
+    query_name = input()
+    avg = student_marks[query_name]
+    print ("%.2f" % avg)
+
