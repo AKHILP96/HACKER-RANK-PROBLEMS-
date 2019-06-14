@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+h,l = map(int,input().split())
+
+
+str = '.|.'
+j=1
+for i in range(0,int(h/2)):
+    print(('.|.'*j).center(l,'-'))
+    j+=2
+
+print('WELCOME'.center(l,'-'))
+
+j-=2
+for i in range(0,int(h/2)):
+    print(('.|.'*j).center(l,'-'))
+    j-=2
